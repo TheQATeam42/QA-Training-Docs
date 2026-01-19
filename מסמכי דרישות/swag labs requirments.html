@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מסמך דרישות - Swag Labs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .subsection {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-right: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .subsection h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-right: 20px;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .user-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .user-card {
+            background: white;
+            padding: 15px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+        }
+        
+        .user-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th,
+        .specs-table td {
+            padding: 12px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+        
+        .specs-table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .important-note strong {
+            color: #856404;
+        }
+        
+        .workflow {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .workflow-step .step-number {
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 מסמך דרישות</h1>
+            <div class="subtitle">Swag Labs - אתר דמו לאימון אוטומציה</div>
+            <p style="margin-top: 10px; color: #888;">גרסה 1.0 | תאריך: דצמבר 2025</p>
+        </div>
+
+        <!-- מבוא -->
+        <div class="section">
+            <h2 class="section-title">1. מבוא ומטרת המערכת</h2>
+            <div class="subsection">
+                <h3>🎯 תיאור כללי</h3>
+                <p>
+                    <strong>Swag Labs</strong> (הידוע גם כ-SauceDemo) הוא אתר דמו לסחר אלקטרוני (e-commerce) 
+                    המיועד לתרגול בדיקות אוטומציה ובדיקות תוכנה. האתר מדמה חנות אינטרנטית אמיתית למכירת מוצרים 
+                    ומאפשר למשתמשים לבצע תהליך קנייה מלא החל מהתחברות, דרך עיון במוצרים ועד השלמת הזמנה.
+                </p>
+            </div>
+            
+            <div class="subsection">
+                <h3>🎭 קהל יעד</h3>
+                <p>
+                    האתר מיועד למהנדסי בדיקות תוכנה, אוטומציה QA, ומפתחים המעוניינים להתאמן ולתרגל:
+                </p>
+                <ul class="feature-list">
+                    <li>בדיקות אוטומציה (Selenium, Cypress, Playwright וכדומה)</li>
+                    <li>כתיבת תסריטי בדיקה (Test Scripts)</li>
+                    <li>הטמעת מתודולוגיית Page Object Model (POM)</li>
+                    <li>בדיקות End-to-End (E2E)</li>
+                    <li>בדיקות פונקציונליות ורגרסיה</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- סוגי משתמשים -->
+        <div class="section">
+            <h2 class="section-title">2. סוגי משתמשים ופרטי התחברות</h2>
+            <div class="subsection">
+                <h3>👥 משתמשים זמינים במערכת</h3>
+                <div class="user-types">
+                    <div class="user-card">
+                        <h4>✅ Standard User</h4>
+                        <p><strong>שם משתמש:</strong> standard_user</p>
+                        <p><strong>תיאור:</strong> משתמש רגיל עם גישה מלאה לכל התכונות</p>
+                    </div>
+                    
+                    <div class="user-card">
+                        <h4>🔒 Locked Out User</h4>
+                        <p><strong>שם משתמש:</strong> locked_out_user</p>
+                        <p><strong>תיאור:</strong> משתמש חסום - לא יכול להתחבר למערכת</p>
+                    </div>
+                    
+                    <div class="user-card">
+                        <h4>🐌 Performance Glitch User</h4>
+                        <p><strong>שם משתמש:</strong> performance_glitch_user</p>
+                        <p><strong>תיאור:</strong> משתמש עם בעיות ביצועים - המערכת איטית</p>
+                    </div>
+                    
+                    <div class="user-card">
+                        <h4>❌ Problem User</h4>
+                        <p><strong>שם משתמש:</strong> problem_user</p>
+                        <p><strong>תיאור:</strong> משתמש עם בעיות שונות (תמונות שגויות, בעיות בעגלה)</p>
+                    </div>
+                    
+                    <div class="user-card">
+                        <h4>⚠️ Error User</h4>
+                        <p><strong>שם משתמש:</strong> error_user</p>
+                        <p><strong>תיאור:</strong> משתמש שמקבל שגיאות בשלבים מסוימים</p>
+                    </div>
+                    
+                    <div class="user-card">
+                        <h4>📊 Visual User</h4>
+                        <p><strong>שם משתמש:</strong> visual_user</p>
+                        <p><strong>תיאור:</strong> משתמש לבדיקות ויזואליות - עיצוב שונה</p>
+                    </div>
+                </div>
+                
+                <div class="important-note">
+                    <strong>⚠️ חשוב:</strong> הסיסמה לכל המשתמשים היא: <code>secret_sauce</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- תכונות עיקריות -->
+        <div class="section">
+            <h2 class="section-title">3. תכונות ופונקציונליות עיקריות</h2>
+            
+            <div class="subsection">
+                <h3>🔐 3.1 מסך התחברות (Login Page)</h3>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>שדה קלט שם משתמש (Username):</strong> מקבל טקסט חופשי, שומר את ערך המשתמש</li>
+                    <li><strong>שדה קלט סיסמה (Password):</strong> מקבל טקסט מוסתר (****), שומר את ערך הסיסמה</li>
+                    <li><strong>כפתור התחברות (Login Button):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מאמת את שם המשתמש והסיסמה מול המערכת</li>
+                            <li>במקרה של הצלחה: מנתב לעמוד המוצרים (/inventory.html)</li>
+                            <li>במקרה של כישלון: מציג הודעת שגיאה מתאימה מתחת לכפתור</li>
+                            <li>משתמש חסום: מציג הודעה "Sorry, this user has been locked out"</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור X (לסגירת שגיאה):</strong> מופיע בצד הודעת השגיאה, מסיר את הודעת השגיאה מהמסך</li>
+                    <li><strong>לוגו Swag Labs:</strong> אלמנט סטטי, אין פעולה בלחיצה</li>
+                    <li><strong>תיבת מידע על משתמשים:</strong> מציגה רשימה של משתמשים לדוגמה, אין אינטראקציה</li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>רקע כללי:</strong> צבע ירוק בהיר</li>
+                    <li><strong>קונטיינר מרכזי:</strong> תיבה לבנה ממורכזת באמצע המסך, עם צל עדין</li>
+                    <li><strong>לוגו:</strong> נמצא בחלק העליון של התיבה הלבנה, מסודר במרכז</li>
+                    <li><strong>שדות קלט:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>מסודרים אחד מתחת לשני במרכז</li>
+                            <li>רוחב מלא של הקונטיינר</li>
+                            <li>גבול עדין באפור</li>
+                            <li>רקע לבן</li>
+                            <li>טקסט placeholder באפור בהיר</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור Login:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע ירוק בהיר (#3DDC91)</li>
+                            <li>טקסט לבן, bold</li>
+                            <li>רוחב מלא</li>
+                            <li>ממוקם מתחת לשדות הקלט</li>
+                            <li>פינות מעוגלות</li>
+                        </ul>
+                    </li>
+                    <li><strong>הודעת שגיאה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע אדום בהיר</li>
+                            <li>טקסט לבן</li>
+                            <li>ממוקמת מתחת לכפתור Login</li>
+                            <li>כוללת אייקון X בצד ימין לסגירה</li>
+                        </ul>
+                    </li>
+                    <li><strong>תיבת מידע על משתמשים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממוקמת מתחת לריבוע התחברות</li>
+                            <li>רקע ירוק כהה</li>
+                            <li>טקסט לבן</li>
+                            <li>מציגה את רשימת המשתמשים והסיסמה</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>🛍️ 3.2 עמוד המוצרים (Products/Inventory Page)</h3>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/inventory.html</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כותרת "Products":</strong> כותרת סטטית, אין אינטראקציה</li>
+                    <li><strong>תפריט המבורגר (Burger Menu):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: פותח תפריט צד עם אפשרויות ניווט</li>
+                            <li>מציג: All Items, About, Logout, Reset App State</li>
+                        </ul>
+                    </li>
+                    <li><strong>אייקון עגלת הקניות:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב לעמוד העגלה (/cart.html)</li>
+                            <li>מציג מונה של כמות המוצרים בעגלה (badge אדום)</li>
+                        </ul>
+                    </li>
+                    <li><strong>תפריט מיון (Sort Dropdown):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: ממיין את רשימת המוצרים לפי הקריטריון שנבחר</li>
+                            <li>אפשרויות: A-Z, Z-A, מחיר נמוך-גבוה, מחיר גבוה-נמוך</li>
+                            <li>עדכון מיידי של סדר המוצרים בדף</li>
+                        </ul>
+                    </li>
+                    <li><strong>תמונת מוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: לחיצה מנתבת לעמוד פרטי המוצר הספציפי</li>
+                        </ul>
+                    </li>
+                    <li><strong>שם המוצר (קישור):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: לחיצה מנתבת לעמוד פרטי המוצר הספציפי</li>
+                        </ul>
+                    </li>
+                    <li><strong>תיאור המוצר:</strong> טקסט סטטי, אין אינטראקציה</li>
+                    <li><strong>מחיר המוצר:</strong> טקסט סטטי, אין אינטראקציה</li>
+                    <li><strong>כפתור "Add to Cart":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מוסיף את המוצר לעגלת הקניות</li>
+                            <li>משנה את עצמו ל-"Remove" לאחר הוספה</li>
+                            <li>מעדכן את מונה העגלה</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Remove":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מסיר את המוצר מעגלת הקניות</li>
+                            <li>משנה את עצמו בחזרה ל-"Add to Cart"</li>
+                            <li>מעדכן את מונה העגלה</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header (כותרת עליונה):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע לבן</li>
+                            <li>מתפרס על כל רוחב המסך</li>
+                            <li>גובה קבוע</li>
+                            <li>מכיל: תפריט המבורגר (שמאל), לוגו Swag Labs (מרכז), אייקון עגלה (ימין)</li>
+                        </ul>
+                    </li>
+                    <li><strong>תפריט המבורגר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>3 קווים אופקיים שחורים</li>
+                            <li>ממוקם בפינה השמאלית העליונה</li>
+                        </ul>
+                    </li>
+                    <li><strong>אייקון עגלה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>עגלת קניות שחורה</li>
+                            <li>ממוקם בפינה הימנית העליונה</li>
+                            <li>מונה אדום עם מספר (אם יש מוצרים) מעל האייקון</li>
+                        </ul>
+                    </li>
+                    <li><strong>כותרת "Products":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט גדול, bold</li>
+                            <li>ממוקם מתחת ל-header, בצד שמאל</li>
+                        </ul>
+                    </li>
+                    <li><strong>תפריט מיון:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Dropdown לבן, טקסט שחור</li>
+                            <li>ממוקם בצד ימין, באותו שורה עם "Products"</li>
+                            <li>אייקון חץ למטה</li>
+                        </ul>
+                    </li>
+                    <li><strong>רשת המוצרים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פריסה של עמוד אחד בתצורת טלפון, 2 עמודות על המחשב</li>
+                            <li>מרווחים שווים בין המוצרים</li>
+                        </ul>
+                    </li>
+                    <li><strong>כרטיס מוצר (Product Card):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע לבן</li>
+                            <li>גבול עדין באפור</li>
+                            <li>תמונת מוצר בחלק העליון בטלפון, בצד שמאל במחשב</li>
+                            <li>שם המוצר - טקסט ירוק כהה, bold, קישור ירוק בהיר בעת ריחוף עם העכבר</li>
+                            <li> תיאור - טקסט שחור קטן מתחת לכותרת</li>
+                            <li>מחיר - טקסט גדול ובולט בפינה שמאל תחתונה</li>
+                            <li>כפתור Add/Remove - רקע שחור/אדום, טקסט שחור\אדום, בפינה ימין תחתונה</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p><strong>רשימת המוצרים:</strong></p>
+                <table class="specs-table">
+                    <tr>
+                        <th>שם מוצר</th>
+                        <th>מחיר</th>
+                    </tr>
+                    <tr>
+                        <td>Sauce Labs Backpack</td>
+                        <td>$29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sauce Labs Bike Light</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sauce Labs Bolt T-Shirt</td>
+                        <td>$15.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sauce Labs Fleece Jacket</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sauce Labs Onesie</td>
+                        <td>$7.99</td>
+                    </tr>
+                    <tr>
+                        <td>Test.allTheThings() T-Shirt (Red)</td>
+                        <td>$15.99</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="subsection">
+                <h3>📦 3.3 עמוד פרטי מוצר (Product Details Page)</h3>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/inventory-item.html?id=[product_id]</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כפתור "Back to Products":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב חזרה לעמוד המוצרים (/inventory.html)</li>
+                        </ul>
+                    </li>
+                    <li><strong>תמונה גדולה של המוצר:</strong> אלמנט ויזואלי, אין אינטראקציה</li>
+                    <li><strong>שם המוצר:</strong> כותרת גדולה, אין אינטראקציה</li>
+                    <li><strong>תיאור מפורט:</strong> טקסט ארוך יותר מאשר בעמוד המוצרים, אין אינטראקציה</li>
+                    <li><strong>מחיר:</strong> טקסט בולט, אין אינטראקציה</li>
+                    <li><strong>כפתור "Add to Cart":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מוסיף את המוצר לעגלה</li>
+                            <li>משנה את עצמו ל-"Remove"</li>
+                            <li>מעדכן את מונה העגלה</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Remove":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מסיר את המוצר מהעגלה</li>
+                            <li>משנה את עצמו ל-"Add to Cart"</li>
+                            <li>מעדכן את מונה העגלה</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header:</strong> זהה לעמוד המוצרים - רקע כהה, לוגו, המבורגר, עגלה</li>
+                    <li><strong>כפתור "Back to Products":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממוקם בצד שמאל, מתחת ל-header</li>
+                            <li>טקסט ירוק (קישור)</li>
+                            <li>חץ לכיוון שמאל</li>
+                        </ul>
+                    </li>
+                    <li><strong>פריסת המידע:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>תמונה גדולה בצד שמאל</li>
+                            <li>פרטי המוצר בצד ימין</li>
+                        </ul>
+                    </li>
+                    <li><strong>תמונת המוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>תמונה גדולה וברורה</li>
+                            <li>רקע לבן</li>
+                        </ul>
+                    </li>
+                    <li><strong>שם המוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט גדול, bold</li>
+                            <li>צבע שחור</li>
+                        </ul>
+                    </li>
+                    <li><strong>תיאור:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט שחור</li>
+                            <li>גודל בינוני</li>
+                        </ul>
+                    </li>
+                    <li><strong>מחיר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט גדול ובולט</li>
+                            <li>צבע שחור</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור Add/Remove:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע לבן</li>
+                            <li>טקסט שחור\אדום</li>
+                            <li>רוחב מלא של אזור הטקסט</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>🛒 3.4 עגלת הקניות (Shopping Cart)</h3>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/cart.html</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כותרת "Your Cart":</strong> כותרת סטטית</li>
+                    <li><strong>כותרות עמודות:</strong> QTY (כמות), Description (תיאור)</li>
+                    <li><strong>רשימת מוצרים בעגלה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>כל מוצר מוצג בשורה נפרדת</li>
+                            <li>מציג: כמות (תמיד 1), שם, תיאור, מחיר</li>
+                        </ul>
+                    </li>
+                    <li><strong>כותרת המוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: פותח את דף תיאור המוצר</li>
+                            <li>בריחוף על הכותרת עם העכבר משנה את הצבע לירוק בהיר ואת העכבר ללחיצה</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Remove" בריבוע מוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מסיר את המוצר מהעגלה</li>
+                            <li>מעדכן את מונה העגלה</li>
+                            <li>אם העגלה נהיית ריקה, מציג עגלה ריקה</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Continue Shopping":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב חזרה לעמוד המוצרים (/inventory.html)</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Checkout":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב לשלב הראשון של תהליך התשלום (/checkout-step-one.html)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header:</strong> זהה לדפים הקודמים</li>
+                    <li><strong>כותרת "Your Cart":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט גדול, מתחת ל-header</li>
+                            <li>בצד שמאל</li>
+                        </ul>
+                    </li>
+                    <li><strong>כותרות עמודות:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע לבן</li>
+                            <li>טקסט שחור</li>
+                            <li>מתפרס על רוחב הטבלה</li>
+                        </ul>
+                    </li>
+                    <li><strong>ריבוע המוצר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>מסגרת אפורה בהירה דקה</li>
+                            <li>כמות בצד שמאל בתוך מסגרת ריבועית. כמות: 1</li>
+                            <li>שם המוצר בצבע ירוק כהה</li>
+                            <li>תיאור המוצר בצבע שחור קטן</li>
+                            <li>מחיר המוצר בצבע שחור בתוך מסגרת ריבועית</li>
+                            <li>כפתור Remove בצבע אדום</li>
+                        </ul>
+                    </li>
+                    <li><strong>אזור כפתורי פעולה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממוקם בתחתית הדף</li>
+                            <li>שני כפתורים זה לצד זה במחשב, אחד מתחת לשני בטלפון</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Continue Shopping":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע לבן</li>
+                            <li>טקסט שחור</li>
+                            <li>מסגרת שחורה</li>
+                            <li>חץ לכיוון שמאל</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Checkout":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע ירוק בהיר</li>
+                            <li>טקסט לבן</li>
+                            <li>בצד ימין</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>💳 3.5 תהליך התשלום (Checkout)</h3>
+                
+                <h4 style="color: #764ba2; margin-top: 20px;">▶️ שלב 1 - מידע אישי (Checkout: Your Information)</h4>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/checkout-step-one.html</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כותרת "Checkout: Your Information":</strong> כותרת סטטית</li>
+                    <li><strong>שדה First Name:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>שדה קלט טקסט חובה</li>
+                            <li>Placeholder: "First Name"</li>
+                        </ul>
+                    </li>
+                    <li><strong>שדה Last Name:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>שדה קלט טקסט חובה</li>
+                            <li>Placeholder: "Last Name"</li>
+                        </ul>
+                    </li>
+                    <li><strong>שדה Zip/Postal Code:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>שדה קלט טקסט/מספר חובה</li>
+                            <li>Placeholder: "Zip/Postal Code"</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Cancel":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב חזרה לעגלת הקניות (/cart.html)</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Continue":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מאמת שכל השדות מלאים</li>
+                            <li>אם חסר שדה: מציג הודעת שגיאה אדומה</li>
+                            <li>אם הכל תקין: מנתב לשלב 2 (/checkout-step-two.html)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header:</strong> זהה לדפים הקודמים</li>
+                    <li><strong>כותרת:</strong> טקסט גדול מתחת ל-header, בצד שמאל</li>
+                    <li><strong>טופס:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממורכז במסך</li>
+                            <li>רקע לבן</li>
+                            <li>3 שדות קלט אחד מתחת לשני</li>
+                        </ul>
+                    </li>
+                    <li><strong>שדות קלט:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רוחב מלא</li>
+                            <li>גבול אפור</li>
+                            <li>רקע לבן</li>
+                        </ul>
+                    </li>
+                    <li><strong>הודעת שגיאה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע אדום</li>
+                            <li>טקסט לבן</li>
+                            <li>מופיעה מתחת לשדות</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתורים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Cancel - רקע לבן, בצד שמאל, חץ לכיוון שמאל</li>
+                            <li>Continue - רקע ירוק, בצד ימין</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #764ba2; margin-top: 20px;">▶️ שלב 2 - סקירה (Checkout: Overview)</h4>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/checkout-step-two.html</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כותרת "Checkout: Overview":</strong> כותרת סטטית</li>
+                    <li><strong>רשימת מוצרים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>הצגת כל המוצרים שבעגלה</li>
+                            <li>תמונה, שם, תיאור, מחיר לכל מוצר, כמות</li>
+                            <li>אין אפשרות להסיר מוצרים בשלב זה</li>
+                        </ul>
+                    </li>
+                    <li><strong>Payment Information:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט סטטי</li>
+                            <li>מציג: "SauceCard #31337"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Shipping Information:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט סטטי</li>
+                            <li>מציג: "Free Pony Express Delivery!"</li>
+                        </ul>
+                    </li>
+                    <li><strong>סיכום מחירים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Item total: סכום כל המוצרים</li>
+                            <li>Tax: מס (8% מהסכום)</li>
+                            <li>Total: סכום כולל (Item total + Tax)</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Cancel":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב לעמוד המוצרים (/inventory.html)</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Finish":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: משלים את ההזמנה</li>
+                            <li>מנתב לדף האישור (/checkout-complete.html)</li>
+                            <li>מנקה את העגלה</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header:</strong> זהה לדפים הקודמים</li>
+                    <li><strong>כותרת:</strong> טקסט גדול מתחת ל-header</li>
+                    <li><strong>רשימת מוצרים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>זהה להצגה בעגלה</li>
+                            <li>ללא כפתורי Remove</li>
+                        </ul>
+                    </li>
+                    <li><strong>פרטי תשלום ומשלוח:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>טקסט שחור</li>
+                            <li>מסודרים בשתי שורות</li>
+                        </ul>
+                    </li>
+                    <li><strong>סיכום מחירים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Item total - טקסט רגיל</li>
+                            <li>Tax - טקסט רגיל</li>
+                            <li>Total - טקסט בולט</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתורים:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Cancel - רקע לבן טקסט שחור, אייקון חץ שמאל</li>
+                            <li>Finish - רקע ירוק, טקסט שחור</li>
+                            <li>במחשב הכפתורים באותה שורה, בטלפון הכפתורים אחד מתחת לשני</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #764ba2; margin-top: 20px;">▶️ שלב 3 - אישור (Checkout: Complete!)</h4>
+                <p><strong>נתיב:</strong> <code>https://www.saucedemo.com/checkout-complete.html</code></p>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>כותרת "Checkout: Complete!":</strong> כותרת סטטית</li>
+                    <li><strong>אייקון V ירוק:</strong> סמל אישור ויזואלי</li>
+                    <li><strong>הודעת תודה:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>"Thank you for your order!"</li>
+                            <li>טקסט גדול ובולט</li>
+                        </ul>
+                    </li>
+                    <li><strong>הודעה משנית:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>"Your order has been dispatched, and will arrive just as fast as the pony can get there!"</li>
+                        </ul>
+                    </li>
+                    <li><strong>תמונת פוני:</strong> תמונה דקורטיבית</li>
+                    <li><strong>כפתור "Back Home":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב לעמוד המוצרים (/inventory.html)</li>
+                            <li>העגלה התרוקנה</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>Header:</strong> זהה לדפים הקודמים, מונה העגלה ריק</li>
+                    <li><strong>כותרת:</strong> טקסט גדול מתחת ל-header</li>
+                    <li><strong>תוכן מרכזי:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממורכז במסך</li>
+                            <li>רקע לבן</li>
+                        </ul>
+                    </li>
+                    <li><strong>אייקון V:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>צבע ירוק בהיר</li>
+                            <li>גדול ובולט</li>
+                            <li>ממורכז</li>
+                        </ul>
+                    </li>
+                    <li><strong>הודעות:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>ממורכזות</li>
+                            <li>הודעה ראשית - גדולה ובולטת</li>
+                            <li>הודעה משנית - קטנה יותר</li>
+                        </ul>
+                    </li>
+                    <li><strong>תמונת פוני:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>גדולה</li>
+                            <li>ממורכזת</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור "Back Home":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רקע ירוק</li>
+                            <li>טקסט לבן</li>
+                            <li>ממורכז בתחתית</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>☰ 3.6 תפריט ניווט (Burger Menu)</h3>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">📋 אלמנטים ופונקציונליות</h4>
+                <ul class="feature-list">
+                    <li><strong>אייקון המבורגר:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: פותח/סגור את התפריט הצדדי</li>
+                        </ul>
+                    </li>
+                    <li><strong>"All Items":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתב לעמוד המוצרים (/inventory.html)</li>
+                        </ul>
+                    </li>
+                    <li><strong>"About":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: פותח קישור חיצוני ל-https://saucelabs.com/</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Logout":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מנתק את המשתמש</li>
+                            <li>מנתב למסך ההתחברות (https://www.saucedemo.com/)</li>
+                            <li>מנקה את מצב הסשן</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Reset App State":</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: מאפס את מצב האפליקציה</li>
+                            <li>מנקה את עגלת הקניות</li>
+                            <li>לא מנתק את המשתמש</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור X (סגירה):</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>פעולה: סוגר את התפריט הצדדי</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 עיצוב ומיקום אלמנטים</h4>
+                <ul class="feature-list">
+                    <li><strong>פאנל צד:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>נפתח מצד שמאל</li>
+                            <li>רוחב בינוני (כ-50% מהמסך במובייל, פחות בדסקטופ)</li>
+                            <li>רקע לבן</li>
+                            <li>צל כהה</li>
+                            <li>אנימציית slide-in</li>
+                        </ul>
+                    </li>
+                    <li><strong>רקע מעומעם:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>כשהתפריט פתוח, רקע שחור שקוף מכסה את שאר המסך</li>
+                            <li>לחיצה על הרקע סוגרת את התפריט</li>
+                        </ul>
+                    </li>
+                    <li><strong>כפתור X:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>בפינה השמאלית העליונה של הפאנל</li>
+                            <li>צבע כהה</li>
+                        </ul>
+                    </li>
+                    <li><strong>פריטי תפריט:</strong> 
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>רשימה אנכית</li>
+                            <li>טקסט כהה גדול</li>
+                            <li>מרווחים נדיבים בין הפריטים</li>
+                            <li>בריחוף עם העכבר, צבע הכותרות משתנה לירוק בהיר</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- תהליכי עבודה -->
+        <div class="section">
+            <h2 class="section-title">4. תרחישי שימוש (User Flows)</h2>
+            
+            <div class="subsection">
+                <h3>🔄 תהליך קנייה מלא (Happy Path)</h3>
+                <div class="workflow">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div>התחברות עם standard_user</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div>עיון בעמוד המוצרים</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div>הוספת מוצר אחד או יותר לעגלה</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div>מעבר לעגלת הקניות</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div>לחיצה על Checkout</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">6</div>
+                        <div>מילוי פרטים אישיים</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">7</div>
+                        <div>סקירת הזמנה</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">8</div>
+                        <div>השלמת הזמנה</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">9</div>
+                        <div>קבלת אישור</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- עיצוב וממשק -->
+        <div class="section">
+            <h2 class="section-title">5. עיצוב וממשק משתמש (UI/UX)</h2>
+            
+            <div class="subsection">
+                <h3>🎨 ערכת צבעים</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>אלמנט</th>
+                        <th>צבע</th>
+                    </tr>
+                    <tr>
+                        <td>רקע כללי</td>
+                        <td>לבן (#FFFFFF)</td>
+                    </tr>
+                    <tr>
+                        <td>כפתור ראשי (Primary)</td>
+                        <td>ירוק בהיר (#3DDC91)</td>
+                    </tr>
+                    <tr>
+                        <td>כפתור משני (Secondary)</td>
+                        <td>אפור בהיר</td>
+                    </tr>
+                    <tr>
+                        <td>טקסט כהה</td>
+                        <td>שחור (#000000)</td>
+                    </tr>
+                    <tr>
+                        <td>הודעות שגיאה</td>
+                        <td>אדום</td>
+                    </tr>
+                    <tr>
+                        <td>Header</td>
+                        <td>כהה</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="subsection">
+                <h3>📱 רספונסיביות</h3>
+                <ul class="feature-list">
+                    <li>תמיכה במובייל (Mobile)</li>
+                    <li>תמיכה בטאבלט (Tablet)</li>
+                    <li>תמיכה בדסקטופ (Desktop)</li>
+                    <li>עיצוב מותאם לכל גודל מסך</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>♿ נגישות (Accessibility)</h3>
+                <ul class="feature-list">
+                    <li>תמיכה בתווי data-test לאוטומציה</li>
+                    <li>ניווט ברור ואינטואיטיבי</li>
+                    <li>כפתורים וקישורים נגישים</li>
+                    <li>ניגודיות צבעים מספקת</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- דרישות טכניות -->
+        <div class="section">
+            <h2 class="section-title">6. דרישות טכניות</h2>
+            
+            <div class="subsection">
+                <h3>🌐 תאימות דפדפנים</h3>
+                <ul class="feature-list">
+                    <li>Google Chrome (גרסה עדכנית)</li>
+                    <li>Mozilla Firefox (גרסה עדכנית)</li>
+                    <li>Safari (macOS/iOS)</li>
+                    <li>Microsoft Edge</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>⚡ ביצועים</h3>
+                <ul class="feature-list">
+                    <li>זמן טעינה מהיר של דפים (מלבד performance_glitch_user)</li>
+                    <li>תגובה מהירה לפעולות משתמש</li>
+                    <li>ניהול מצב אפליקציה יעיל</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>🔒 אבטחה</h3>
+                <ul class="feature-list">
+                    <li>מערכת התחברות מאובטחת (דמו)</li>
+                    <li>הצפנת מידע רגיש</li>
+                    <li>הגנה מפני גישה לא מורשית</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>🧪 אוטומציה ובדיקות</h3>
+                <ul class="feature-list">
+                    <li>תווי data-test ייחודיים לכל אלמנט</li>
+                    <li>ID וקלאסים סמנטיים</li>
+                    <li>מבנה HTML נקי ועקבי</li>
+                    <li>תמיכה בכלי אוטומציה מובילים (Selenium, Cypress, Playwright)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- בדיקות -->
+        <div class="section">
+            <h2 class="section-title">7. הערות נוספות</h2>
+            
+            <div class="subsection">
+                <h3>📱 רספונסיביות</h3>
+                <ul class="feature-list">
+                    <li>האתר מגיב לגדלי מסך שונים</li>
+                    <li>במובייל: תצוגת עמודה אחת, תפריט המבורגר</li>
+                    <li>בטאבלט: תצוגת 2 עמודות מוצרים</li>
+                    <li>בדסקטופ: תצוגת 2-3 עמודות מוצרים</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>💾 שמירת מצב</h3>
+                <ul class="feature-list">
+                    <li>העגלה נשמרת במהלך הסשן</li>
+                    <li>ניתן לנווט בין דפים מבלי לאבד את תוכן העגלה</li>
+                    <li>התנתקות מנקה את כל המצב</li>
+                    <li>Reset App State מנקה רק את העגלה</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3>🎭 התנהגויות מיוחדות של משתמשים</h3>
+                <ul class="feature-list">
+                    <li><strong>standard_user:</strong> עובד בצורה תקינה ללא בעיות</li>
+                    <li><strong>locked_out_user:</strong> חסום - לא יכול להתחבר, מקבל הודעת שגיאה</li>
+                    <li><strong>problem_user:</strong> תמונות מוצרים שגויות, בעיות בהוספה לעגלה, התנהגות לא צפויה</li>
+                    <li><strong>performance_glitch_user:</strong> המערכת איטית מאוד, זמני טעינה ארוכים</li>
+                    <li><strong>error_user:</strong> מקבל שגיאות בשלבים מסוימים של התהליך</li>
+                    <li><strong>visual_user:</strong> עיצוב ויזואלי שונה, לבדיקות רגרסיה ויזואלית</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- סיכום -->
+        <div class="section">
+            <h2 class="section-title">8. סיכום</h2>
+            <div class="subsection">
+                <p>
+                    מסמך זה מגדיר את כל הדרישות הפונקציונליות והעיצוביות של אתר Swag Labs. 
+                    המערכת מיועדת לשמש כפלטפורמה לתרגול בדיקות אוטומציה ובדיקות תוכנה, 
+                    ומספקת סביבה מבוקרת עם משתמשים שונים וסוגי התנהגויות מגוונות.
+                </p>
+                <p style="margin-top: 15px;">
+                    כל דף במערכת תוכנן בקפידה עם אלמנטים ברורים ופעולות מוגדרות היטב, 
+                    המאפשרים כתיבת בדיקות מדויקות ואמינות.
+                </p>
+            </div>
+        </div>
+
+        <!-- פוטר -->
+        <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 2px solid #667eea; color: #888;">
+            <p>מסמך דרישות זה נוצר למטרות אימון ותרגול בדיקות תוכנה</p>
+            <p style="margin-top: 10px;">© Swag Labs - SauceDemo</p>
+        </div>
+    </div>
+</body>
+</html>
